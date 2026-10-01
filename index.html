@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CampusFind - Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CampusFind</h1>
+        
+        <p>Lost something? Found something? Let your campus know.</p>
+        <nav>
+    <a href="#report">Report Item</a>
+    <a href="#reports">Browse Reports</a>
+</nav>
+    </header>
+
+    <div class="container">
+        <!-- Dashboard -->
+<section class="dashboard">
+
+    <div class="stat-card">
+        <span id="totalCount">0</span>
+        <p>Total Reports</p>
+    </div>
+
+    <div class="stat-card">
+        <span id="lostCount">0</span>
+        <p>Lost Items</p>
+    </div>
+
+    <div class="stat-card">
+        <span id="foundCount">0</span>
+        <p>Found Items</p>
+    </div>
+
+    <div class="stat-card">
+        <span id="claimedCount">0</span>
+        <p>Claimed</p>
+    </div>
+
+</section>
+
+        <h2 id="report">Report an Item</h2>
+
+        <input type="text" id="itemName" placeholder="Item name">
+        <input type="text" id="studentName" placeholder="Your name">
+
+        <input type="text" id="contact" placeholder="Email or phone number">
+        
+        <select id="itemType">
+            <option value="Lost">I Lost It</option>
+            <option value="Found">I Found It</option>
+        </select>
+
+        <input type="text" id="location" placeholder="Where?">
+
+        <input type="text" id="description" placeholder="Short description">
+        <input type="file" id="itemImage" accept="image/*">
+        
+
+        <button onclick="addItem()">Post Item</button>
+
+        <h2 id="report">Recent Reports</h2>
+        <input type="text" id="searchBox" placeholder="Search item...">
+
+<select id="filterType" onchange="filterItems()">
+    <option value="All">All Items</option>
+    <option value="Lost">Lost Items</option>
+    <option value="Found">Found Items</option>
+</select>
+
+        <div id="itemList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
